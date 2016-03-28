@@ -13,7 +13,7 @@ docker run -it -v /home/user/.ssh:/root/.ssh -v /home/user/git:/root/git ismailm
 ```
 source quick-ansible.sh
 
-# A container will be created then destroyed each time you run
+# A container will be created then destroyed each time you run `ansible ... ` or `ansible-playbook ...`
 ansible all -m ping
 ```
 
