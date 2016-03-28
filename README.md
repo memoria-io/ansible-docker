@@ -3,6 +3,7 @@
 ## Running the image without run.sh script
 > The following code doesn't use run.sh,
 It uses host machine ssh and git folders, then it goes into bash
+
 ```
 docker run -it -v /home/user/.ssh:/root/.ssh -v /home/user/git:/root/git ismailmarmoush/ansible bash
 ```
