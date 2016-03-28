@@ -1,25 +1,23 @@
 # Docker Ansible Image
 
-## Running the image without run.sh script
-> The following code doesn't use run.sh,
-It uses host machine ssh and git folders, then it goes into bash
-
+## Running the image without quick-ansible.sh script
 ```
+docker run -it ismailmarmoush/ansible <any command>
+docker run -it ismailmarmoush/ansible bash
+# Use host machine .ssh & git folders
 docker run -it -v /home/user/.ssh:/root/.ssh -v /home/user/git:/root/git ismailmarmoush/ansible bash
 ```
 
-## One image run per command (using run.sh)
-> With one command the Docker image will be run and it will execute your ansible command, then it will close. 
-Also make sure ansible is not already installed on your host machine because the function is called ansible too, 
-you can just change function names in run.sh file to fit your needs.
 
+## Running the image per command (using quick-ansible.sh)
 ```
-source run.sh
-```
+source quick-ansible.sh
 
-Now you can use ansible as if it was installed on your host machine.
-```
+# A container will be created then destroyed each time you run
 ansible all -m ping
 ```
+
+> Make sure ansible is not already installed on your host machine because the functions are called same as ansible commands.
+you can just change function names in run.sh if you have ansible installed on your machine.
 
 
