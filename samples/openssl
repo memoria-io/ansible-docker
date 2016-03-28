@@ -1,0 +1,20 @@
+# This is a reference 
+#---
+#
+# - name: Create private key for each node
+#   command: openssl genpkey -algorithm RSA -out "{{ssl_nodes_folder}}{{csr_CN_node}}{{item}}/{{node_private_key_name}}" -pkeyopt rsa_keygen_bits:2048
+#   with_sequence: count={{children}}
+#
+# - name: Create CSR for each node
+#   command: >
+#       openssl req -new -key "{{ssl_nodes_folder}}{{csr_CN_node}}{{item}}/{{node_private_key_name}}"
+#       -out "{{ssl_nodes_folder}}{{csr_CN_node}}{{item}}/{{node_csr_name}}"
+#       -subj "/C={{csr_C_node}}/ST={{csr_ST_node}}/L={{csr_L_node}}/O={{csr_O_node}}/OU={{csr_OU_node}}/CN={{csr_CN_node}}{{item}}/emailAddress={{csr_emailAddress_node}}"
+#   with_sequence: count={{children}}
+#
+# - name: Creating certificate for each node, signed by the CA
+#   command: >
+#      openssl x509 -req -days 365 -in "{{ssl_nodes_folder}}{{csr_CN_node}}{{item}}/{{node_csr_name}}"
+#      -signkey "{{ssl_folder}}{{private_key}}" -out {{ssl_nodes_folder}}{{csr_CN_node}}{{item}}/{{node_cert_name}}
+#   with_sequence: count={{children}}
+
