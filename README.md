@@ -2,10 +2,10 @@
 
 ## Running the image without quick-ansible.sh script
 ```
-docker run -it ismailmarmoush/ansible <any command>
-docker run -it ismailmarmoush/ansible bash
+docker run -it ismailmarmoush/docker-ansible <any command>
+docker run -it ismailmarmoush/docker-ansible bash
 # Use host machine .ssh & git folders
-docker run -it -v /home/user/.ssh:/root/.ssh -v /home/user/git:/root/git ismailmarmoush/ansible bash
+docker run -it -v /home/user/.ssh:/root/.ssh -v /home/user/git:/root/git ismailmarmoush/docker-ansible bash
 ```
 
 
