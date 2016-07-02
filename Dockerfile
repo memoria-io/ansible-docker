@@ -1,10 +1,14 @@
-FROM debian:8.3
+FROM debian:latest
 
 MAINTAINER Ismail Marmoush<marmoushismail@gmail.com>
 
 ### Install Utils
-RUN apt-get update && apt-get install -y --force-yes git python python-dev python-pip
-RUN pip install paramiko PyYAML Jinja2 httplib2 six
+RUN apt-get update && apt-get install -y git curl apt-utils gcc make build-essential libssl-dev libffi-dev 
+RUN apt-get update && apt-get install -y python2.7 python2.7-dev python-dev
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+RUN python2.7 get-pip.py
+RUN pip install PyYaml paramiko Jinja2 httplib2 six
+
 
 ### Install Ansible
 ARG ANSIBLE_DIR=/root/git/ansible

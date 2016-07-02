@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE_NAME=ismailmarmoush/ansible
+IMAGE_NAME=ismailmarmoush/docker-ansible
 
 # Change here to fit your needs
 HOST_SSH=$HOME/.ssh
