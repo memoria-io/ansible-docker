@@ -21,3 +21,4 @@ ansible all -m ping
 you can just change function names in run.sh if you have ansible installed on your machine.
 
 
+.
