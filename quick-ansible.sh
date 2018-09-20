@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE_NAME=ismailmarmoush/docker-ansible
+IMAGE_NAME=ismailmarmoush/ansible-docker
 
 # Change here to fit your needs
 HOST_SSH=$HOME/.ssh
@@ -12,12 +12,12 @@ MACHINE_GIT=/root/git
 
 ansible(){
 	CODE="$@"
-	docker run -it -e CODE="ansible ${CODE}" -v $HOST_SSH:$MACHINE_SSH -v $HOST_GIT:MACHINE_GIT $IMAGE_NAME
+	docker run -it -e CODE="ansible ${CODE}" -v $HOST_SSH:$MACHINE_SSH -v $HOST_GIT:$MACHINE_GIT $IMAGE_NAME
 }
 
 ansible-playbook(){
 	CODE="$@"
-	docker run -it -e CODE="ansible-playbook ${CODE}" -v $HOST_SSH:$MACHINE_SSH -v $HOST_GIT:MACHINE_GIT  $IMAGE_NAME
+	docker run -it -e CODE="ansible-playbook ${CODE}" -v $HOST_SSH:$MACHINE_SSH -v $HOST_GIT:$MACHINE_GIT  $IMAGE_NAME
 }
 
 "$@"

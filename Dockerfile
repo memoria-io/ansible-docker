@@ -19,7 +19,7 @@ RUN git clone git://github.com/ansible/ansible.git --recursive $ANSIBLE_DIR
 RUN mkdir -p /etc/ansible
 RUN echo 'localhost' > /etc/ansible/hosts
 
-ENV ENV_SETUP ${ANSIBLE_DIR}/hacking/env-setup"
+ENV ENV_SETUP ${ANSIBLE_DIR}/hacking/env-setup
 
 RUN echo "source ${ENV_SETUP} -q" >> /etc/bash.bashrc
 
