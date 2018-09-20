@@ -1,8 +1,9 @@
 # Docker Ansible Image
 
+[![Docker Build Status](https://img.shields.io/docker/build/ismailmarmoush/ansible-docker.svg)](https://hub.docker.com/r/ismailmarmoush/ansible-docker/)
+[![Docker Build Status](https://img.shields.io/docker/pulls/ismailmarmoush/ansible-docker.svg)](https://hub.docker.com/r/ismailmarmoush/ansible-docker/)
 
-[![Docker Build Status](https://img.shields.io/docker/build/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/ismailmarmoush/ansible-docker/)
-
+https://hub.docker.com/r/ecoron/serpscrap
 
 ## Running the image without quick-ansible.sh script
 ```
@@ -25,4 +26,3 @@ ansible all -m ping
 you can just change function names in run.sh if you have ansible installed on your machine.
 
 
-.
