@@ -1,5 +1,9 @@
 # Docker Ansible Image
 
+
+[![Docker Build Status](https://img.shields.io/docker/build/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/ismailmarmoush/ansible-docker/)
+
+
 ## Running the image without quick-ansible.sh script
 ```
 docker run -it ismailmarmoush/docker-ansible <any command>
