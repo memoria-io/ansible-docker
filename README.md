@@ -19,11 +19,12 @@ By sourcing `source quick-ansible.sh` or  adding it to .bashrc  `source ~/git/an
 
 **Examples:**
 
-```
+```bash
 ansible --version
+# Hence, normal ansible commands are hyphened, while here are underscored 
 ansible_galaxy
 ansible_vault
-etc
+...
 ```
 
 > Make sure ansible is not already installed on your host machine because the functions 
