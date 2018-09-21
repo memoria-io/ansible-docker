@@ -15,9 +15,14 @@ ansible(){
 	docker run -it -e CODE="ansible ${CODE}" -v $HOST_SSH:$MACHINE_SSH -v $HOST_GIT:$MACHINE_GIT $IMAGE_NAME
 }
 
-ansible-playbook(){
+ansible_playbook(){
 	CODE="$@"
 	docker run -it -e CODE="ansible-playbook ${CODE}" -v $HOST_SSH:$MACHINE_SSH -v $HOST_GIT:$MACHINE_GIT  $IMAGE_NAME
 }
+
+ansible_bash(){
+	docker run -it -v $HOST_SSH:$MACHINE_SSH -v $HOST_GIT:$MACHINE_GIT $IMAGE_NAME /bin/bash
+}
+
 
 "$@"

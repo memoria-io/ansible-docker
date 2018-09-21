@@ -11,7 +11,7 @@ RUN pip install PyYaml paramiko Jinja2 httplib2 six
 
 
 ### Install Ansible
-ARG ANSIBLE_DIR=/root/git/ansible
+ARG ANSIBLE_DIR=/root/ansible
 
 RUN mkdir -p $ANSIBLE_DIR
 RUN git clone git://github.com/ansible/ansible.git --recursive $ANSIBLE_DIR
