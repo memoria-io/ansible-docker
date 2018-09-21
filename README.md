@@ -21,9 +21,8 @@ By sourcing `source quick-ansible.sh` or  adding it to .bashrc  `source ~/git/an
 
 ```bash
 ansible --version
-# Hence, normal ansible commands are hyphened, while here are underscored 
-ansible_galaxy
-ansible_vault
+ansible-galaxy
+ansible-vault
 ...
 ```
 

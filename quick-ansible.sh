@@ -5,7 +5,7 @@ IMAGE_NAME=ismailmarmoush/ansible-docker
 HOST_SSH=$HOME/.ssh
 MACHINE_SSH=/root/.ssh
 
-ansible_run(){
+run_ansible(){
 	code="${@:2}"
 	host_workdir=$PWD
     machine_workdir="$PWD"
@@ -27,51 +27,51 @@ chown_dir(){
 }
 
 ansible(){
-    ansible_run ansible "$@"
+    run_ansible ansible "$@"
 }
 
-ansible_playbook(){
-    ansible_run ansible-playbook "$@"
+ansible-playbook(){
+    run_ansible ansible-playbook "$@"
 }
 
-ansible_galaxy(){
-    ansible_run ansible-galaxy "$@"
+ansible-galaxy(){
+    run_ansible ansible-galaxy "$@"
 }
 
-ansible_config(){
-    ansible_run ansible-config "$@"
+ansible-config(){
+    run_ansible ansible-config "$@"
 }
 
-ansible_connection(){
-    ansible_run ansible-connection "$@"
+ansible-connection(){
+    run_ansible ansible-connection "$@"
 }
 
-ansible_console(){
-    ansible_run ansible-console "$@"
+ansible-console(){
+    run_ansible ansible-console "$@"
 }
 
-ansible_doc(){
-    ansible_run ansible-doc "$@"
+ansible-doc(){
+    run_ansible ansible-doc "$@"
 }
 
-ansible_inventory(){
-    ansible_run ansible-inventory "$@"
+ansible-inventory(){
+    run_ansible ansible-inventory "$@"
 }
 
-ansible_pull(){
-    ansible_run ansible-pull "$@"
+ansible-pull(){
+    run_ansible ansible-pull "$@"
 }
 
-ansible_test(){
-    ansible_run ansible-test "$@"
+ansible-test(){
+    run_ansible ansible-test "$@"
 }
 
-ansible_vault(){
-    ansible_run ansible-vault "$@"
+ansible-vault(){
+    run_ansible ansible-vault "$@"
 }
 
 ansible_bash(){
-    ansible_run bash "$@"
+    run_ansible bash "$@"
 }
 
 
