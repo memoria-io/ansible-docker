@@ -19,6 +19,10 @@ ansible_run(){
 
     # Because ansible mounts folders inside docker,
     # which runs as root it changes files permissions!
+    # sudo chown -R $(id -u $USER):$(id -g $USER) $PWD
+}
+
+chown_dir(){
     sudo chown -R $(id -u $USER):$(id -g $USER) $PWD
 }
 
