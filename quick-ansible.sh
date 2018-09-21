@@ -24,39 +24,39 @@ ansible_playbook(){
 }
 
 ansible_galaxy(){
-    ansible_run ansible_galaxy "$@"
+    ansible_run ansible-galaxy "$@"
 }
 
 ansible_config(){
-    ansible_run ansible_config "$@"
+    ansible_run ansible-config "$@"
 }
 
 ansible_connection(){
-    ansible_run ansible_connection "$@"
+    ansible_run ansible-connection "$@"
 }
 
 ansible_console(){
-    ansible_run ansible_console "$@"
+    ansible_run ansible-console "$@"
 }
 
 ansible_doc(){
-    ansible_run ansible_doc "$@"
+    ansible_run ansible-doc "$@"
 }
 
 ansible_inventory(){
-    ansible_run ansible_inventory "$@"
+    ansible_run ansible-inventory "$@"
 }
 
 ansible_pull(){
-    ansible_run ansible_pull "$@"
+    ansible_run ansible-pull "$@"
 }
 
 ansible_test(){
-    ansible_run ansible_test "$@"
+    ansible_run ansible-test "$@"
 }
 
 ansible_vault(){
-    ansible_run ansible_vault "$@"
+    ansible_run ansible-vault "$@"
 }
 
 ansible_bash(){
