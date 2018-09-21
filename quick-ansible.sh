@@ -8,7 +8,7 @@ MACHINE_SSH=/root/.ssh
 ansible_run(){
 	code="${@:2}"
 	host_workdir=$PWD
-    machine_workdir=$(basename "$PWD")
+    machine_workdir=/$(basename "$PWD")
 
 	docker run -it \
 	    -e CODE="$1 ${code}" \
