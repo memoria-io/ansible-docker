@@ -16,6 +16,10 @@ ansible_run(){
 	    -v $host_workdir:$machine_workdir \
 	    -w $machine_workdir \
 	    $IMAGE_NAME
+
+    # Because ansible mounts folders inside docker,
+    # which runs as root it changes files permissions!
+    sudo chown -R $(id -u $USER):$(id -g $USER) $PWD
 }
 
 ansible(){
