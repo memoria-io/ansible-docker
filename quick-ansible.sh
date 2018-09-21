@@ -27,7 +27,7 @@ ansible_playbook(){
 }
 
 ansible_galaxy(){
-    ansible_run ansible-galaxy "$@"
+    ansible_run ansible-galaxy --roles-path /$(basename "$PWD") "$@"
 }
 
 ansible_config(){
