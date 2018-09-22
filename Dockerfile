@@ -3,7 +3,8 @@ FROM debian:latest
 MAINTAINER Ismail Marmoush<marmoushismail@gmail.com>
 
 ### Install Utils
-RUN apt-get update && apt-get install -y git curl apt-utils gcc make build-essential libssl-dev libffi-dev man
+RUN apt-get update && apt-get install -y git curl apt-utils gcc make build-essential libssl-dev libffi-dev man nano
+
 RUN apt-get update && apt-get install -y python2.7 python2.7-dev python-dev
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python2.7 get-pip.py

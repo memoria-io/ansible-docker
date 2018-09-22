@@ -1,9 +1,9 @@
 #!/bin/bash
 
 IMAGE_NAME=ismailmarmoush/ansible-docker
-
-HOST_SSH=$HOME/.ssh
-MACHINE_SSH=/root/.ssh
+network="private_network"
+host_ssh=$HOME/.ssh
+machine_ssh=/root/.ssh
 
 ansible_run(){
 	code="${@:2}"
@@ -12,9 +12,10 @@ ansible_run(){
 
 	docker run -it \
 	    -e CODE="$1 ${code}" \
-	    -v $HOST_SSH:$MACHINE_SSH \
+	    -v $host_ssh:$machine_ssh \
 	    -v $host_workdir:$machine_workdir \
 	    -w $machine_workdir \
+	    --network $network \
 	    $IMAGE_NAME
 
     # Because ansible mounts folders inside docker,
