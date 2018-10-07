@@ -11,7 +11,10 @@ docker run -it ismailmarmoush/ansible-docker <any other command>
 
 ## Run with helper script
 ```bash
-./main.sh run <private network name> <your ssh key directory> 
+# Default of ssh_dir is  ~/.ssh
+# Default of network is nothing usually when you're talking to remote hosts not on your machine
+./main.sh run ssh_dir=./myspecial_ssh
+./main.sh run network=private_network
 ```
 
 ## Note

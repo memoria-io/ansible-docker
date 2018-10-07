@@ -1,19 +1,23 @@
 #!/bin/bash
 
 ansible_run(){
-    IMAGE_NAME=ismailmarmoush/ansible-docker
-    network=$1
-    host_ssh=$2
-    host_ssh=${host_ssh:-$HOME/.ssh}
+    local IMAGE_NAME ssh_dir network
+    local ${@}
+    IMAGE_NAME=${IMAGE_NAME:-ismailmarmoush/ansible-docker}
+    ssh_dir=${ssh_dir:-$HOME/.ssh}
+    if [[ -n $network ]]; then
+        network="--network $network"
+    fi
+
 	host_workdir=$PWD
     machine_workdir="$PWD"
 
 	docker run -it \
         -e CODE="bash" \
-	    -v $host_ssh:/root/.ssh \
+	    -v $ssh_dir:/root/.ssh \
 	    -v $host_workdir:$machine_workdir \
 	    -w $machine_workdir \
-	    --network $network \
+	    $network \
 	    $IMAGE_NAME
 }
 
