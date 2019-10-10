@@ -10,7 +10,7 @@ run(){
     fi
 
 	host_workdir=$PWD
-    machine_workdir="$PWD"
+        machine_workdir="$PWD"
 
 	docker run -it \
         -e CODE="bash" \
