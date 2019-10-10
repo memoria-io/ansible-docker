@@ -13,7 +13,7 @@ run(){
         machine_workdir="$PWD"
 
 	docker run -it \
-        -e CODE="bash" \
+            -e CODE="bash" \
 	    -v $ssh_dir:/root/.ssh \
 	    -v $host_workdir:$machine_workdir \
 	    -w $machine_workdir \
