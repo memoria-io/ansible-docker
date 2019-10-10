@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ansible_run(){
+run(){
     local IMAGE_NAME ssh_dir network
     local ${@}
     IMAGE_NAME=${IMAGE_NAME:-ismailmarmoush/ansible-docker}
