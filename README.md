@@ -1,7 +1,7 @@
 # Docker Ansible Image
 
-[![Docker Build Status](https://github.com/IsmailMarmoush/ansible-docker/workflows/push/badge.svg)]()
-[![Docker Build Status](https://img.shields.io/docker/pulls/ismailmarmoush/ansible-docker.svg)](https://hub.docker.com/r/ismailmarmoush/ansible-docker/)
+[![Docker Build Status](https://github.com/IsmailMarmoush/ansible-docker/workflows/Docker/badge.svg)]()
+[![Docker Pulls Status](https://img.shields.io/docker/pulls/ismailmarmoush/ansible-docker.svg)](https://hub.docker.com/r/ismailmarmoush/ansible-docker/)
 
 ## Run without any helper scripts
 ```
