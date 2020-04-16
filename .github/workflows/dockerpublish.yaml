@@ -13,13 +13,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build image
-        run: docker build . --file Dockerfile
+        run: docker build . --tag ${GITHUB_REPOSITORY,,}
 
       - name: Log into registry
         run: echo "${{ secrets.docker_password }}" | docker login -u ${{ secrets.docker_username }} --password-stdin
 
       - name: Push image
         run: |
-          docker tag image ${GITHUB_REPOSITORY,,}:latest
-          docker push ${GITHUB_REPOSITORY,,}
+          docker push ${GITHUB_REPOSITORY,,}:latest
 
