@@ -1,7 +1,7 @@
 # Docker Ansible Image
 
-[![Docker Build Status](https://github.com/IsmailMarmoush/ansible-docker/workflows/Docker/badge.svg)](https://github.com/IsmailMarmoush/ansible-docker/actions?query=workflow%3ADocker)
-[![Docker Pulls Status](https://img.shields.io/docker/pulls/ismailmarmoush/ansible-docker.svg)](https://hub.docker.com/r/ismailmarmoush/ansible-docker/)
+[![Docker Build Status](https://github.com/memoria-io/ansible-docker/workflows/Docker/badge.svg)](https://github.com/memoria-io/ansible-docker/actions?query=workflow%3ADocker)
+[![Docker Pulls Status](https://img.shields.io/docker/pulls/memoriaio/ansible-docker.svg)](https://hub.docker.com/r/memoriaio/ansible-docker/)
 
 ## Run without any helper scripts
 ```
