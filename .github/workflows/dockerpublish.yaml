@@ -13,12 +13,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build image
-        run: docker build . --tag ${GITHUB_REPOSITORY,,}
+        run: docker build . --tag memoriaio/ansible-docker
 
       - name: Log into registry
         run: echo "${{ secrets.docker_password }}" | docker login -u ${{ secrets.docker_username }} --password-stdin
 
       - name: Push image
         run: |
-          docker push ${GITHUB_REPOSITORY,,}:latest
+          docker push memoriaio/ansible-docker:latest
 
